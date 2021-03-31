@@ -20,6 +20,7 @@ class AttractionsController < ApplicationController
       def edit
         @attraction = Attraction.find_by(id: params[:id])
         @ride = @attraction.rides.build(user_id: current_user.id)
+        
       end
     
       def update
@@ -35,7 +36,7 @@ class AttractionsController < ApplicationController
             :min_height,
             :tickets,
             :happiness_rating,
-            :nausea_ratiing
+            :nausea_rating
           )
         end
 end
